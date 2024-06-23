@@ -30,4 +30,32 @@ public class TodoView {
         sc.nextLine();
         return id;
     }
+
+    public void exit() {
+        System.out.println("프로그램을 종료합니다.");
+    }
+
+    public void none() {
+        System.out.println("잘못된 입력입니다.");
+    }
+
+    public void printAdd(Todo todo) {
+        System.out.println("할 일이 추가되었습니다. ID: [ " + todo.getId() + " ]");
+    }
+
+    public void printDelete(Todo todo) {
+        if (todo != null) {
+            System.out.println("할 일이 삭제되었습니다. ID: [ " + todo.getId() + " ]");
+        } else {
+            System.out.println("해당 ID의 할 일이 없습니다.");
+        }
+    }
+
+    public void printFind(Todo todo) {
+        if (todo != null) {
+            System.out.println("할 일 ID: [ " + todo.getId() + " ] 내용: [ " + todo.getContents() + " ]");
+        } else {
+            System.out.println("해당 ID의 할 일이 없습니다.");
+        }
+    }
 }
