@@ -11,8 +11,6 @@ public class TodoController {
         while (flag) {
             String n = todoView.getOption();
             Option option = Option.of(n);
-            System.out.println(option);
-            System.out.println(n);
             switch (option) {
                 case ADD:
                     addTodo();
